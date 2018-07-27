@@ -4,10 +4,9 @@ import './AuthorField.css'
 class AuthorField extends Component {
     constructor() {
         super()
-        this.state = Object.assign({
-            name : "author",
+        this.state = {
             value: ""
-        })
+        }
 
         this.handleChange = this.handleChange.bind(this)
         this.apply = this.apply.bind(this)
@@ -18,14 +17,18 @@ class AuthorField extends Component {
     }
     
     apply() {
-        let bookAuthor = this.state.value
-        this.props.setSelectedBookInfo(bookAuthor) 
+        let bookAuthorName = this.props.name
+        let bookAuthorValue = this.state.value
+        let bookAuthorSelected = {}
+        bookAuthorSelected[bookAuthorName] = bookAuthorValue
+
+        this.props.setSelectedBookInfo(bookAuthorValue) 
     }
 
     render() {
         return (
             <div className="flex">
-                <label>Write the {this.state.name} here</label>
+                <label>Write the {this.props.name} here</label>
                 <input 
                 type="text"
                 className= "input-lg"

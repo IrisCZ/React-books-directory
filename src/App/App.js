@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TitleField from '../TitleField/TitleField';
 import AuthorField from '../AuthorField/AuthorField';
+import GenreField from '../GenreField/GenreField';
 
 class App extends Component {
   constructor() {
@@ -24,8 +25,9 @@ class App extends Component {
   render() {
     return (
       <section className="app">
-        <TitleField setSelectedBookInfo={this.setSelectedBookInfo}></TitleField>
-        <AuthorField setSelectedBookInfo={this.setSelectedBookInfo}></AuthorField>
+        <TitleField setSelectedBookInfo={this.setSelectedBookInfo} name={"title"}></TitleField>
+        <AuthorField setSelectedBookInfo={this.setSelectedBookInfo} name={"author"}></AuthorField>
+        <GenreField setSelectedBookInfo={this.setSelectedBookInfo} name={"genre"} options={["Comedy", "Action", "Terror"]}></GenreField>
 
       </section>
     );

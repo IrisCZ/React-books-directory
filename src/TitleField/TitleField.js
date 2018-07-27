@@ -5,7 +5,6 @@ class TitleField extends Component {
     constructor() {
         super()
         this.state = Object.assign({
-            name : "title",
             value: ""
         })
 
@@ -18,14 +17,18 @@ class TitleField extends Component {
     }
       
     apply() {
-        let bookTitle = this.state.value
-        this.props.setSelectedBookInfo(bookTitle) 
+        let bookTitleName = this.props.name
+        let bookTitleValue = this.state.value
+        let bookTitleSelected = {}
+        bookTitleSelected[bookTitleName] = bookTitleValue
+
+        this.props.setSelectedBookInfo(bookTitleValue) 
     }
 
     render() {
         return (
             <div className="flex">
-                <label>Write the {this.state.name} here</label>
+                <label>Write the {this.props.name} here</label>
                 <input 
                 type="text"
                 className= "input-lg"
