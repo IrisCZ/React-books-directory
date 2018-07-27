@@ -1,0 +1,201 @@
+@charset "UTF-8"
+
+body
+  margin: 0
+  padding: 0
+  overflow: hidden
+  position: relative
+  width: 100%
+
+*
+  box-sizing: border-box
+  font-family: "Montserrat", sans-serif
+  scroll-behavior: smooth
+
+a
+  text-decoration: none
+  color: #000
+  font-weight: 900
+
+p
+  font-size: .8em
+
+button, .editable
+  cursor: pointer
+
+.header
+  background-color: #f1f4f5
+  border-bottom: 3px solid #869514
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15)
+  justify-content: space-between
+  padding: 0.5em
+  position: relative
+
+main
+  background-color: #fff
+  overflow: auto
+  padding: 5em 15%
+
+.app
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 1em
+
+.hidden
+  display: none
+
+.card
+  padding: 1em
+
+.flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  label
+    margin-bottom: .5em
+
+.button-close
+  align-self: flex-start
+  border-radius: 50%
+  background-color: #f1f4f5
+  border-style: none
+  outline: none
+  padding: 0.25em .75em
+  font-size: 1em
+  font-family: cursive
+  font-weight: 900
+  margin-left: 1em
+  border: 1px solid black
+
+.input-lg
+  width: 100%
+  padding: 0.75em 1em
+
+/*TABLE
+
+table
+  margin-top: 1em
+  width: 100%
+  th, td
+    border-bottom: 1px solid #272c2f
+    padding: .5em
+    text-align: center
+  th
+    text-transform: uppercase
+    width: 30%
+
+.striped-table
+  tr:nth-child(even)
+    background-color: #f1f4f5
+  th:last-child
+    width: 10%
+
+input:focus
+  outline: none
+  box-shadow: 0 0 3px #869514
+
+/*GRID
+
+.grid-container
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-column-gap: 1vmax
+  grid-row-gap: 1vmax
+  grid-auto-flow: dense
+
+.col-xs-4
+  grid-column-end: span 4
+
+.col-xs-3
+  grid-column-end: span 3
+
+.col-xs-1
+  grid-column-end: span 1
+
+.col-xs-12
+  grid-column-end: span 12
+
+.title
+  font-size: 2.2em
+  font-weight: 400
+  text-align: center
+  text-transform: uppercase
+
+/*COMPONENTS
+
+.search__genres__container
+  flex-wrap: wrap
+  justify-content: flex-start
+  position: relative
+  z-index: 0
+
+.search__genres__input
+  display: flex
+  width: 100%
+  button
+    font-weight: 900
+
+.search__genres__info
+  font-size: .8em
+  position: absolute
+  top: 6em
+
+.save__container
+  justify-content: flex-end
+
+.saveButton
+  align-self: flex-end
+  padding: .75em .5em
+
+/*POPUP
+
+html, body, .app
+  margin: 0
+  padding: 0
+  width: 100%
+
+.modal
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background-color: rgba(0, 0, 0, 0.5)
+  height: 100%
+  margin: auto
+  position: fixed
+  width: 100%
+  z-index: 1
+
+.modal__inner
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(122, 118, 122, 0.55)
+  -moz-box-shadow: 3px 4px 5px 0px rgba(122, 118, 122, 0.55)
+  box-shadow: 3px 4px 5px 0px rgba(122, 118, 122, 0.55)
+  left: 20%
+  right: 20%
+  top: 20%
+  bottom: 20%
+  background: white
+  margin: auto
+  overflow: auto
+  padding: 1em
+  position: absolute
+
+.modal__close-button
+  background-color: transparent
+  border: 1px solid #000
+  border-radius: 50%
+  color: #000
+  font-family: cursive
+  font-weight: 900
+  outline: none
+  padding: .5rem .85rem
+  position: absolute
+  top: 1em
+  right: 1em
+
+.modal__input
+  width: 95%
+
+.modal__add-button
+  font-family: cursive
+  font-size: 1.5em
