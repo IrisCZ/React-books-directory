@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './AuthorField.css'
 
 class AuthorField extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             value: ""
         }
@@ -16,13 +16,17 @@ class AuthorField extends Component {
         this.setState({value: e.target.value})
     }
     
+    reset() {
+        this.setState({ value : ""})
+    }
+    
     apply() {
         let bookAuthorName = this.props.name
         let bookAuthorValue = this.state.value
         let bookAuthorSelected = {}
         bookAuthorSelected[bookAuthorName] = bookAuthorValue
 
-        this.props.setSelectedBookInfo(bookAuthorValue) 
+        this.props.setSelectedBookInfo(bookAuthorSelected) 
     }
 
     render() {

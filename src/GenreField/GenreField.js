@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './GenreField.css'
 
 class GenreField extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             value: ""
         }
@@ -22,7 +22,11 @@ class GenreField extends Component {
         let bookGenreSelected = {}
         bookGenreSelected[bookGenreName] = bookGenreValue
 
-        this.props.setSelectedBookInfo(bookGenreValue) 
+        this.props.setSelectedBookInfo(bookGenreSelected) 
+    }
+
+    reset() {
+        this.setState({ value : ""})
     }
 
     render() {

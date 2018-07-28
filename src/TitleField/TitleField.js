@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './TitleField.css'
 
 class TitleField extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = Object.assign({
             value: ""
         })
@@ -15,6 +15,10 @@ class TitleField extends Component {
     handleChange(e) {
         this.setState({value: e.target.value})
     }
+
+    reset() {
+        this.setState({ value : ""})
+    }
       
     apply() {
         let bookTitleName = this.props.name
@@ -22,7 +26,7 @@ class TitleField extends Component {
         let bookTitleSelected = {}
         bookTitleSelected[bookTitleName] = bookTitleValue
 
-        this.props.setSelectedBookInfo(bookTitleValue) 
+        this.props.setSelectedBookInfo(bookTitleSelected) 
     }
 
     render() {
@@ -31,6 +35,7 @@ class TitleField extends Component {
                 <label>Write the {this.props.name} here</label>
                 <input 
                 type="text"
+                id="input-title"
                 className= "input-lg"
                 placeholder="e.g. 1Q84"
                 value={this.state.value}

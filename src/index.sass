@@ -36,35 +36,29 @@ main
   overflow: auto
   padding: 5em 15%
 
-.app
-  display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  grid-gap: 1em
-
 .hidden
   display: none
 
-.card
-  padding: 1em
+.button
+  background-color: #111111 
+  border-style: none
+  color: #fff
+  font-size: 1em
+  font-family: cursive
+  font-weight: 900
+  margin-left: .5em
+  outline: none
+  padding: .5em .75em
 
-.flex
-  display: flex
-  flex-wrap: wrap
-  justify-content: flex-start
-  label
-    margin-bottom: .5em
+.button-save:
+  height: 2.5em
+
+.button-actions
+  padding: .25em .5em
 
 .button-close
   align-self: flex-start
   border-radius: 50%
-  background-color: #f1f4f5
-  border-style: none
-  outline: none
-  padding: 0.25em .75em
-  font-size: 1em
-  font-family: cursive
-  font-weight: 900
-  margin-left: 1em
   border: 1px solid black
 
 .input-lg
@@ -74,7 +68,9 @@ main
 /*TABLE
 
 table
-  margin-top: 1em
+  border-collapse: separate
+  border-spacing: 1em 0
+  margin-top: 2em
   width: 100%
   th, td
     border-bottom: 1px solid #272c2f
@@ -89,31 +85,6 @@ table
     background-color: #f1f4f5
   th:last-child
     width: 10%
-
-input:focus
-  outline: none
-  box-shadow: 0 0 3px #869514
-
-/*GRID
-
-.grid-container
-  display: grid
-  grid-template-columns: repeat(12, 1fr)
-  grid-column-gap: 1vmax
-  grid-row-gap: 1vmax
-  grid-auto-flow: dense
-
-.col-xs-4
-  grid-column-end: span 4
-
-.col-xs-3
-  grid-column-end: span 3
-
-.col-xs-1
-  grid-column-end: span 1
-
-.col-xs-12
-  grid-column-end: span 12
 
 .title
   font-size: 2.2em
