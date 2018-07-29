@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import InputField from '../InputField/InputField'
 import './AuthorField.css'
 
 class AuthorField extends Component {
@@ -31,17 +32,13 @@ class AuthorField extends Component {
 
     render() {
         return (
-            <div className="flex">
-                <label>Write the {this.props.name} here</label>
-                <input 
-                type="text"
-                className= "input-lg"
+            <InputField                 
+                name= "title"
                 placeholder="e.g. Haruki Murakami"
                 value={this.state.value}
-                onChange={this.handleChange}
-                onBlur={this.apply}
-                /> 
-            </div>
+                handleChange= {this.handleChange}
+                apply = {this.apply}>
+            </InputField>
         )
     }
 }
