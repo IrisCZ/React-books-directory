@@ -57,7 +57,7 @@ class App extends Component {
         <form id="form" className="inline">
           <TitleField ref={title => {this.title = title}} setSelectedBookInfo={this.setSelectedBookInfo} defaultValue={this.state.book.title} name={"title"}></TitleField>
           <AuthorField ref={author => {this.author = author}} setSelectedBookInfo={this.setSelectedBookInfo}  defaultValue={this.state.book.author} name={"author"}></AuthorField>
-          <GenreField ref={genre => {this.genre = genre}} setSelectedBookInfo={this.setSelectedBookInfo}  defaultValue={this.state.book.genre} name={"genre"} options={["","Comedy", "Action", "Terror"]}></GenreField>
+          <GenreField ref={genre => {this.genre = genre}} setSelectedBookInfo={this.setSelectedBookInfo}  defaultValue={this.state.book.genre} name={"genre"} options={["","Comedy", "Action", "Terror", "Science Fiction"]}></GenreField>
           <SaveButton save={this.save}></SaveButton>
         </form>
         <article>

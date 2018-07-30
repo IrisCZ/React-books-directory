@@ -37,7 +37,6 @@ class GenreField extends Component {
                 <select
                     type="text"
                     className= "input-lg"
-                    placeholder="e.g. Haruki Murakami"
                     value={this.state.value}
                     onChange={this.handleChange}
                     onBlur={this.apply}>
