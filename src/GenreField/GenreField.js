@@ -28,6 +28,10 @@ class GenreField extends Component {
     reset() {
         this.setState({ value : ""})
     }
+        
+    setValue(value){
+        this.setState({ value : value})
+    }
 
     render() {
 

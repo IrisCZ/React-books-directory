@@ -6,9 +6,9 @@ class TitleField extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            value: "",
+            value: props.defaultValue,
         }
-
+        
         this.handleChange = this.handleChange.bind(this)
         this.apply = this.apply.bind(this)
     }
@@ -19,6 +19,10 @@ class TitleField extends Component {
 
     reset() {
         this.setState({ value : ""})
+    }
+
+    setValue(value){
+        this.setState({ value : value})
     }
       
     apply() {

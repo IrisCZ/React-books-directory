@@ -29,7 +29,11 @@ class AuthorField extends Component {
 
         this.props.setSelectedBookInfo(bookAuthorSelected) 
     }
-
+    
+    setValue(value){
+        this.setState({ value : value})
+    }
+    
     render() {
         return (
             <InputField                 
